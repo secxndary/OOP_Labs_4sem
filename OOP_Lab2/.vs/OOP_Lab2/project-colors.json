@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "ada40bb0-e8b2-4c51-ba1f-0ddbf309d926": {
+      "ProjectGuid": "ada40bb0-e8b2-4c51-ba1f-0ddbf309d926",
+      "DisplayName": "OOP_Lab2",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Прочие файлы",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}

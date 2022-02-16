@@ -1,0 +1,11 @@
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab2\OOP_Lab2\bin\Debug\OOP_Lab2.exe.config
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab2\OOP_Lab2\bin\Debug\OOP_Lab2.exe
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab2\OOP_Lab2\bin\Debug\OOP_Lab2.pdb
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab2\OOP_Lab2\obj\Debug\OOP_Lab2.csproj.AssemblyReference.cache
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab2\OOP_Lab2\obj\Debug\OOP_Lab2.csproj.SuggestedBindingRedirects.cache
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab2\OOP_Lab2\obj\Debug\OOP_Lab2.Form1.resources
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab2\OOP_Lab2\obj\Debug\OOP_Lab2.Properties.Resources.resources
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab2\OOP_Lab2\obj\Debug\OOP_Lab2.csproj.GenerateResource.cache
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab2\OOP_Lab2\obj\Debug\OOP_Lab2.csproj.CoreCompileInputs.cache
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab2\OOP_Lab2\obj\Debug\OOP_Lab2.exe
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab2\OOP_Lab2\obj\Debug\OOP_Lab2.pdb
