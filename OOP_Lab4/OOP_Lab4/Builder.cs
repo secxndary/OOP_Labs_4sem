@@ -13,7 +13,8 @@ namespace OOP_Lab4
     }
 
 
-    class Director      // класс менеджера, который делегирует билдеру создание дисциплины
+    // класс менеджера, который делегирует билдеру создание дисциплины
+    class Director      
     {
         // в этот список запишем пару дисциплин и выведем их в MessageBox
         public static List<Discipline> listOfDisciplinesBuilder = new List<Discipline>();
@@ -27,22 +28,44 @@ namespace OOP_Lab4
             return builder.Discipline;
         }
 
-        // это якобы мейн (аки с метанита), но этот статик метод буду вызывать каждый раз при нажатии соответствующей кнопки
+
+        // что-то вроде мейна, здесь каждый раз при нажатии буттона будет добавляться в список одна рандомная дисциплина
         public static void BuilderMain()
         {
-            Director director = new Director();                 // экземпляр директора
+            Director director = new Director();         // экземпляр директора
 
-            Builder builder = new ReactBuilder();               // работяга типа РеактБилдер
-            Discipline react = director.ConstuctAll(builder);   // создаем реакт с помощью работяги
-            listOfDisciplinesBuilder.Add(react);                // добавляем в список который потом выведем на экран
+            Random random = new Random();               // рандом число от 1 до 4
+            int value = random.Next(1, 4);
 
-            builder = new CSharpBuilder();                      // работяга теперь типа ШарпыБилдер
-            Discipline oop = director.ConstuctAll(builder);     // новая дисциплина ООП с помощью работяги типа шарпыБилдер
-            listOfDisciplinesBuilder.Add(oop);                  // опять в списочек (это якобы рандом)
+            switch (value)
+            {
+                case 1:
+                    Builder builderReact = new ReactBuilder();               // работяга типа РеактБилдер
+                    Discipline react = director.ConstuctAll(builderReact);   // создаем реакт с помощью работяги
+                    listOfDisciplinesBuilder.Add(react);                     // добавляем в список который потом выведем на экран
+                    break;
+                case 2:
+                    Builder builderCharp = new CSharpBuilder();              // работяга теперь типа ШарпыБилдер
+                    Discipline oop = director.ConstuctAll(builderCharp);     // новая дисциплина ООП с помощью работяги типа шарпыБилдер
+                    listOfDisciplinesBuilder.Add(oop);                       // опять в списочек
+                    break;
+                case 3:
+                    Builder builderNN = new NoNameBuilder();                 // создать дисциплину без лектора   
+                    Discipline noName = director.ConstuctAll(builderNN);
+                    listOfDisciplinesBuilder.Add(noName);
+                    break;
+                case 4:
+                    Builder builderMP = new MPBuilder();                     // создать матпрогу  
+                    Discipline MathProg = director.ConstuctAll(builderMP);
+                    listOfDisciplinesBuilder.Add(MathProg);
+                    break;
+            }
         }
     }
 
+
     
+
     class ReactBuilder : Builder    // первый конкретный билдер: создать дисциплину по реакту
     {
         public override void BuildLector()  // переопределяем: лектор веба - жилячка
@@ -62,7 +85,6 @@ namespace OOP_Lab4
             Discipline.Type = "ДИСЦИПЛИНА ПО REACT\n";
         }
     }
-
 
 
     class CSharpBuilder : Builder    // второй конкретный билдер: создать дисциплину по шарпам
@@ -85,4 +107,45 @@ namespace OOP_Lab4
         }
     }
 
+
+    class NoNameBuilder : Builder    // третий конкретный билдер: создать дисциплину БЕЗ ЛЕКТОРА
+    {
+        public override void BuildLector()  // я могу переопределить шаги типа "создать лектора" и "создать дисциплину" и, например, вообще опустить создание лектора и создать пустой объект
+        {
+            Discipline.lector = new Lector();
+        }
+
+        public override void BuildDiscipline()  
+        {
+            Discipline.Name = "No Name";
+            Discipline.Semester = "1-ый семестр";
+            Discipline.Course = new List<string> { "2-ой курс" };
+            Discipline.Speciality = new List<string> { "ПОИТ" };
+            Discipline.NumberOfLections = 0;
+            Discipline.NumberOfLabs = 0;
+            Discipline.Control = "зачёт";
+            Discipline.Type = "ДИСЦИПЛИНА БЕЗ ЛЕКТОРА\n";
+        }
+    }
+
+
+    class MPBuilder : Builder    // матпрога
+    {
+        public override void BuildLector() 
+        {
+            Discipline.lector = new Lector("Высшей математики", "О.Б.Плющ", "100-3a");
+        }
+
+        public override void BuildDiscipline()
+        {
+            Discipline.Name = "Математическое программирование";
+            Discipline.Semester = "2-ой семестр";
+            Discipline.Course = new List<string> { "2-ой курс" };
+            Discipline.Speciality = new List<string> { "ПОИТ", "ДЭВИ" };
+            Discipline.NumberOfLections = 24;
+            Discipline.NumberOfLabs = 16;
+            Discipline.Control = "экзамен";
+            Discipline.Type = "ДИСЦИПЛИНА ПО МАТПРОГЕ\n";
+        }
+    }
 }
