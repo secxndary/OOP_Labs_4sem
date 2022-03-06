@@ -39,5 +39,22 @@ namespace OOP_Lab2
             Control = ctrl;
             lector = lect;
         }
+
+        public override string ToString()   /// вывод инфы об объекте
+        {
+            string course = "";
+            string speciality = "";
+            foreach (string c in Course)
+                course += c + "; ";
+            foreach (string s in Speciality)
+                speciality += s + "; ";
+
+            string res = $"Название: {Name}\nКурс: {course}\nСеместр: {Semester}\n" +
+                $"Специальность: {speciality}\nЧасов лекций: {NumberOfLections}\n" +
+                $"Часов лабораторных: {NumberOfLabs}\nТип контроля: {Control}\n" +
+                $"ФИО лектора: {lector.Name}\nКафедра: {lector.Department}\n" +
+                $"Аудитория: {lector.Auditorium}\n\n==============================================\n\n";
+            return res;
+        }
     }
 }

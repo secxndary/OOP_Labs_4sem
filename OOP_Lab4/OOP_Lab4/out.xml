@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Discipline xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Course />
+  <Speciality />
+  <NumberOfLections>0</NumberOfLections>
+  <NumberOfLabs>0</NumberOfLabs>
+  <lector />
+</Discipline>

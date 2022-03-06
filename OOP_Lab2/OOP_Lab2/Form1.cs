@@ -29,7 +29,7 @@ namespace OOP_Lab2
         }
 
 
-
+        public List<Discipline> listOfDisciplines = new List<Discipline>();
         Discipline discipline = new Discipline();   /// в этот объект пишем всю инфу из формы
         string path = @"C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab2\OOP_Lab2\out.xml";
         /// путь по которому будем записывать в xml-файл объект
@@ -72,7 +72,7 @@ namespace OOP_Lab2
             Lector tempLect = new Lector((string)listBox4.SelectedItem, maskedTextBox1.Text, richTextBox2.Text);
             string tempRadio = "";
 
-            foreach (string item in checkedListBox1.SelectedItems)
+            foreach (string item in checkedListBox1.CheckedItems)
                 tempCourse.Add(item);
             foreach (string item in listBox3.SelectedItems)
                 tempSpec.Add(item);
@@ -86,6 +86,8 @@ namespace OOP_Lab2
             discipline = new Discipline(richTextBox1.Text, comboBox1.Text,
                 tempCourse, tempSpec, Int32.Parse(richTextBox3.Text), 
                 Int32.Parse(richTextBox4.Text), tempRadio, tempLect);
+
+            listOfDisciplines.Add(discipline);
 
             /// вывод сообщения что всё окей
             MessageBox.Show("Информация записана в объект!", "DisciplineRedact", MessageBoxButtons.OK);
@@ -161,6 +163,14 @@ namespace OOP_Lab2
 
             /// сообщение о том что всё окей
             MessageBox.Show("Информация выведена!", "DisciplineRedact", MessageBoxButtons.OK);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string result = "==============================================\n\n";
+            foreach (Discipline dist in listOfDisciplines)
+                result += dist.ToString();
+            MessageBox.Show(result);
         }
     }
 }

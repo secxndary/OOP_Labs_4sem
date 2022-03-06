@@ -66,7 +66,7 @@
             this.button1.BackColor = System.Drawing.Color.Cornsilk;
             this.button1.Font = new System.Drawing.Font("Rockwell", 11.216F);
             this.button1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button1.Location = new System.Drawing.Point(101, 454);
+            this.button1.Location = new System.Drawing.Point(114, 454);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(117, 56);
             this.button1.TabIndex = 1;
@@ -283,7 +283,7 @@
             this.button2.BackColor = System.Drawing.Color.Cornsilk;
             this.button2.Font = new System.Drawing.Font("Rockwell", 11.216F);
             this.button2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button2.Location = new System.Drawing.Point(349, 454);
+            this.button2.Location = new System.Drawing.Point(342, 454);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(117, 56);
             this.button2.TabIndex = 21;
@@ -296,7 +296,7 @@
             this.button3.BackColor = System.Drawing.Color.Cornsilk;
             this.button3.Font = new System.Drawing.Font("Rockwell", 11.216F);
             this.button3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button3.Location = new System.Drawing.Point(577, 454);
+            this.button3.Location = new System.Drawing.Point(568, 454);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(117, 56);
             this.button3.TabIndex = 22;

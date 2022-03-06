@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <ArrayOfDiscipline xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Discipline>
-    <Name>Джава</Name>
-    <Semester>2</Semester>
+    <Name>ООП</Name>
+    <Semester>1</Semester>
     <Course>
       <string>2-ой курс</string>
     </Course>
