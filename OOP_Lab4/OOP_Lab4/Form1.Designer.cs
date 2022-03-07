@@ -52,6 +52,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button4
@@ -300,7 +301,7 @@
             this.button1.BackColor = System.Drawing.Color.Cornsilk;
             this.button1.Font = new System.Drawing.Font("Rockwell", 11.216F);
             this.button1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button1.Location = new System.Drawing.Point(50, 460);
+            this.button1.Location = new System.Drawing.Point(646, 379);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(117, 56);
             this.button1.TabIndex = 25;
@@ -329,12 +330,26 @@
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Cornsilk;
+            this.button6.Font = new System.Drawing.Font("Rockwell", 11.216F);
+            this.button6.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.button6.Location = new System.Drawing.Point(51, 450);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(116, 77);
+            this.button6.TabIndex = 47;
+            this.button6.Text = "Создать с Abstract Factory";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::OOP_Lab4.Properties.Resources.a631f27081a367c;
             this.ClientSize = new System.Drawing.Size(800, 549);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -391,6 +406,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
 

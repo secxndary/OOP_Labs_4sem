@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractFactory.cs" />
     <Compile Include="Builder.cs" />
     <Compile Include="Discipline.cs" />
     <Compile Include="Form1.cs">

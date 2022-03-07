@@ -3,13 +3,14 @@ using System.Collections.Generic;
 
 namespace OOP_Lab4
 {
-    abstract class Builder  // абстрактный класс строителя
+    // абстрактный класс билдера
+    abstract class Builder 
     {
-        public Discipline Discipline { get; private set; }              // в этот обьект будем создавать дисциплину с помощью конкретных билдеров по шагам:
-        // эти методы будет переопределять в каждом конкретном билдере
-        public void CreateDiscipline() => Discipline = new Discipline();// 0. создать пустой объект
-        public abstract void BuildLector();                             // 1. создать лектора
-        public abstract void BuildDiscipline();                         // 2. создать всю дисциплину
+        public Discipline Discipline { get; private set; }               // в этот обьект будем создавать дисциплину с помощью конкретных билдеров по шагам:
+        // эти методы будеv переопределять в каждом конкретном билдере
+        public void CreateDiscipline() => Discipline = new Discipline(); // 0. создать пустой объект
+        public abstract void BuildLector();                              // 1. создать лектора
+        public abstract void BuildDiscipline();                          // 2. создать всю дисциплину
     }
 
 
@@ -19,7 +20,7 @@ namespace OOP_Lab4
         // в этот список запишем пару дисциплин и выведем их в MessageBox
         public static List<Discipline> listOfDisciplinesBuilder = new List<Discipline>();
 
-        // метод директора, который приказывает билдеру пошагово создать дисциплины и вернуть ее (рабовладения пиздец)
+        // метод директора, который приказывает билдеру пошагово создать дисциплину и вернуть ее (рабовладения пиздец)
         public Discipline ConstuctAll(Builder builder)
         {
             builder.CreateDiscipline();

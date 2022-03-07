@@ -15,7 +15,6 @@ namespace OOP_Lab4
 
 
         public List<Discipline> listOfDisciplines = new List<Discipline>();
-        //Discipline discipline = new Discipline();
         string path = @"C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab2\OOP_Lab2\out.xml";
         /// путь по которому будем записывать в xml-файл объект (оставляем из 2 лабы)
 
@@ -64,7 +63,7 @@ namespace OOP_Lab4
 
 
 
-            Discipline discipline = new WebDiscipline(richTextBox1.Text, comboBox1.Text,
+            Discipline discipline = new Discipline(richTextBox1.Text, comboBox1.Text,
                 tempCourse, tempSpec, Int32.Parse(richTextBox3.Text),
                 Int32.Parse(richTextBox4.Text), tempRadio, tempLect);
 
@@ -76,6 +75,7 @@ namespace OOP_Lab4
         private void button4_Click_1(object sender, EventArgs e)    // list на экран
         {
             string result = "==============================================\n\n";
+            listOfDisciplines = Director.listOfDisciplinesBuilder;
             foreach (Discipline dist in listOfDisciplines)
                 result += dist.ToString();
             MessageBox.Show(result);
@@ -145,12 +145,30 @@ namespace OOP_Lab4
 
 
 
-        private void button5_Click(object sender, EventArgs e)  // create with builder
+        private void button5_Click(object sender, EventArgs e)  // создать объект с помощью билдера
         {
-            Director.BuilderMain();
-            
+            // статический метод который вызывает своеобразный мейн, создает один
+            // рандомный объект и сразу выводит его на экран
+            Director.BuilderMain();     
+
+            // проходимся по list из director, где хранятся все
+            // созданные объекты, и выводим в MessageBox
             string result = "==============================================\n\n";
-            foreach (Discipline dist in Director.listOfDisciplinesBuilder)
+            foreach (Discipline dist in Director.listOfDisciplinesBuilder)  
+                result += dist.ToString();
+            MessageBox.Show(result);
+        }
+
+        private void button6_Click(object sender, EventArgs e)  // создать объект с абстрактной фабрикой
+        {
+            // вызываем мейн метод для создания рандомных объектов дисциплины с помощью абстракной фабрики
+            AbstractFactory.AFMain();
+
+            // проходимся по list из AbstractFactory, в котором находятся объекты
+            // DisciplineClient, содержащие внутри себя поля DisciplineAF и
+            // LectorAF - логически те же самые объекты дисциплины и лектора
+            string result = "==============================================\n\n";
+            foreach (DisciplineClient dist in AbstractFactory.listAF)  
                 result += dist.ToString();
             MessageBox.Show(result);
         }
