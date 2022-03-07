@@ -2,8 +2,10 @@
 
 namespace OOP_Lab4
 {
+    // своеобразный мейн для передачи данных в форму
     public static class AbstractFactory
     {
+        // в этом списке храним созданные дисциплины
         public static List<DisciplineClient> listAF = new List<DisciplineClient>();
 
         public static void AFMain()
@@ -26,16 +28,20 @@ namespace OOP_Lab4
     //абстрактный класс - лектор
     public abstract class LectorAF
     {
-        public string Department { get; set; }      // кафедра
-        public string Name { get; set; }            // фио
-        public string Auditorium { get; set; }      // аудитория
-
+        // абстрактный метод создания лектора (входные данные будут зависеть от фабрики)
         public abstract void CreateLector();
+
+        // старые добрые поля,которые будем заполнять в переопределнном методе
+        // CreateLector() в наследованных от этого абстрактного класса классах
+        public string Department { get; set; }   
+        public string Name { get; set; }         
+        public string Auditorium { get; set; }   
     }
 
     // абстрактный класс – дисциплина
     public abstract class DisciplineAF
     {
+        // то же самое что и с лектором
         public abstract void CreateDiscipline();
 
         public string Name { get; set; }    
@@ -49,7 +55,9 @@ namespace OOP_Lab4
         public string Type { get; set; }           
 
 
-        public override string ToString()   /// вывод инфы об объекте
+        // в абстрактном классе DisciplineAF есть как поля лектора, так и поля дисциплины,
+        // так что мы можем обратиться ко всем этим полям внутри этого класса и вывести ToString
+        public override string ToString()
         {
             string course = "";
             string speciality = "";
@@ -68,7 +76,7 @@ namespace OOP_Lab4
 
     }
 
-    // класс лектор по вебу
+    // класс конкретный лектор по вебу
     public class WebLector : LectorAF
     {
         public override void CreateLector()
@@ -79,7 +87,7 @@ namespace OOP_Lab4
         }
     }
 
-    // класс лектор по ооп
+    // класс конкретный лектор по ооп
     public class OOPLector : LectorAF
     {
         public override void CreateLector()
@@ -90,10 +98,10 @@ namespace OOP_Lab4
         }
     }
 
-    // создать дисциплину веб
+    // создать дисциплину веб (все эти классы наследуются от соответствующих абстрактных
+    // классов и переопределяют методы для создания объектов)
     public class WebDisciplineAF : DisciplineAF
     {
-
         public override void CreateDiscipline()
         {
             Name = "React JS";
@@ -130,35 +138,29 @@ namespace OOP_Lab4
         public abstract LectorAF CreateLector();
     }
 
-    // фабрика создания веба
+    // фабрика создания веба: переопределяем методы создания дисциплины и лектора
+    // таким образом, чтобы в этих методах тупо вызывались методы создания из 
+    // соответствующих переопределнных классов конкретных дисциплин
     public class WebFactory : DisciplineFactory
     {
-        public override DisciplineAF CreateDiscipline()
-        {
-            return new WebDisciplineAF();
-        }
+        public override DisciplineAF CreateDiscipline() => new WebDisciplineAF();
 
-        public override LectorAF CreateLector()
-        {
-            return new WebLector();
-        }
+        public override LectorAF CreateLector() => new WebLector();
     }
 
-    // Фабрика создания ооп
+    // фабрика создания ооп
     public class OOPFactory : DisciplineFactory
     {
-        public override DisciplineAF CreateDiscipline()
-        {
-            return new OOPDisciplineAF();
-        }
+        public override DisciplineAF CreateDiscipline() => new OOPDisciplineAF();
 
-        public override LectorAF CreateLector()
-        {
-            return new OOPLector();
-        }
+        public override LectorAF CreateLector() => new OOPLector();
     }
 
-    // клиент - сама дисицплина
+    // клиентский объект - реальная дисциплина, объекты которой будут передаваться в list
+    // и выводиться на экран. здесь есть поля абстрактных лектора и дисциплины, которые мы
+    // инициализируем с помощью методов CreateDisciplineClient() и CreateLectorClient().
+    // то, какие именно объекты создадутся (дисциплина по вебу, по ооп, ...) будет
+    // зависеть от того, какую фабрику мы передадим в параметры конструктора.
     public class DisciplineClient
     {
         private LectorAF lector;
