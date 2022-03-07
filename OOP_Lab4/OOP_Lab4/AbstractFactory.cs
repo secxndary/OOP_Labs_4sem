@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace OOP_Lab4
 {
@@ -10,20 +11,33 @@ namespace OOP_Lab4
 
         public static void AFMain()
         {
-            listAF.Clear();
+            Random random = new Random();       // рандом число от 1 до 3
+            int value = random.Next(1, 4);
 
-            DisciplineClient web = new DisciplineClient(new WebFactory());
-            web.CreateLectorClient();
-            web.CreateDisciplineClient();
-
-            DisciplineClient oop = new DisciplineClient(new OOPFactory());
-            oop.CreateLectorClient();
-            oop.CreateDisciplineClient();
-
-            listAF.Add(oop);
-            listAF.Add(web);
+            switch (value)
+            {
+                case 1:
+                    DisciplineClient web = new DisciplineClient(new WebFactory());
+                    web.CreateLectorClient();
+                    web.CreateDisciplineClient();
+                    listAF.Add(web);
+                    break;
+                case 2:
+                    DisciplineClient oop = new DisciplineClient(new OOPFactory());
+                    oop.CreateLectorClient();
+                    oop.CreateDisciplineClient();
+                    listAF.Add(oop);
+                    break;
+                case 3:
+                    DisciplineClient mp = new DisciplineClient(new MPFactory());
+                    mp.CreateLectorClient();
+                    mp.CreateDisciplineClient();
+                    listAF.Add(mp);
+                    break;
+            }
         }
     }
+
 
     //абстрактный класс - лектор
     public abstract class LectorAF
@@ -37,6 +51,7 @@ namespace OOP_Lab4
         public string Name { get; set; }         
         public string Auditorium { get; set; }   
     }
+
 
     // абстрактный класс – дисциплина
     public abstract class DisciplineAF
@@ -53,28 +68,8 @@ namespace OOP_Lab4
         public string Control { get; set; }          
         public LectorAF lector { get; set; }           
         public string Type { get; set; }           
-
-
-        // в абстрактном классе DisciplineAF есть как поля лектора, так и поля дисциплины,
-        // так что мы можем обратиться ко всем этим полям внутри этого класса и вывести ToString
-        public override string ToString()
-        {
-            string course = "";
-            string speciality = "";
-            foreach (string c in Course)
-                course += c + "; ";
-            foreach (string s in Speciality)
-                speciality += s + "; ";
-
-            string res = $"{Type}Название: {Name}\nКурс: {course}\nСеместр: {Semester}\n" +
-                $"Специальность: {speciality}\nЧасов лекций: {NumberOfLections}\n" +
-                $"Часов лабораторных: {NumberOfLabs}\nТип контроля: {Control}\n" +
-                $"ФИО лектора: {lector.Name}\nКафедра: {lector.Department}\n" +
-                $"Аудитория: {lector.Auditorium}\n\n==============================================\n\n";
-            return res;
-        }
-
     }
+
 
     // класс конкретный лектор по вебу
     public class WebLector : LectorAF
@@ -87,6 +82,7 @@ namespace OOP_Lab4
         }
     }
 
+
     // класс конкретный лектор по ооп
     public class OOPLector : LectorAF
     {
@@ -97,6 +93,19 @@ namespace OOP_Lab4
             Auditorium = "200-3а";
         }
     }
+
+
+    // класс конкретный лектор по матпроге
+    public class MPLector : LectorAF
+    {
+        public override void CreateLector()
+        {
+            Department = "Высшей математики";
+            Name = "О.Б.Плющ";
+            Auditorium = "200-3а";
+        }
+    }
+
 
     // создать дисциплину веб (все эти классы наследуются от соответствующих абстрактных
     // классов и переопределяют методы для создания объектов)
@@ -115,6 +124,7 @@ namespace OOP_Lab4
         }
     }
 
+
     // создать дисцпилину ооп
     public class OOPDisciplineAF : DisciplineAF
     { 
@@ -131,12 +141,31 @@ namespace OOP_Lab4
         }
     }
 
+
+    // создать дисцпилину матпрога
+    public class MPDisciplineAF : DisciplineAF
+    {
+        public override void CreateDiscipline()
+        {
+            Name = "Математическое программирование";
+            Semester = "2-ой семестр";
+            Course = new List<string> { "2-ой курс" };
+            Speciality = new List<string> { "ПОИТ", "ДЭВИ" };
+            NumberOfLections = 24;
+            NumberOfLabs = 16;
+            Control = "экзамен";
+            Type = "ДИСЦИПЛИНА ПО МАТПРОГЕ\n";
+        }
+    }
+
+
     // класс абстрактной фабрики
     public abstract class DisciplineFactory
     {
         public abstract DisciplineAF CreateDiscipline();
         public abstract LectorAF CreateLector();
     }
+
 
     // фабрика создания веба: переопределяем методы создания дисциплины и лектора
     // таким образом, чтобы в этих методах тупо вызывались методы создания из 
@@ -148,6 +177,7 @@ namespace OOP_Lab4
         public override LectorAF CreateLector() => new WebLector();
     }
 
+
     // фабрика создания ооп
     public class OOPFactory : DisciplineFactory
     {
@@ -156,6 +186,16 @@ namespace OOP_Lab4
         public override LectorAF CreateLector() => new OOPLector();
     }
 
+
+    // фабрика создания матпроги
+    public class MPFactory : DisciplineFactory
+    {
+        public override DisciplineAF CreateDiscipline() => new MPDisciplineAF();
+
+        public override LectorAF CreateLector() => new MPLector();
+    }
+
+
     // клиентский объект - реальная дисциплина, объекты которой будут передаваться в list
     // и выводиться на экран. здесь есть поля абстрактных лектора и дисциплины, которые мы
     // инициализируем с помощью методов CreateDisciplineClient() и CreateLectorClient().
@@ -163,8 +203,8 @@ namespace OOP_Lab4
     // зависеть от того, какую фабрику мы передадим в параметры конструктора.
     public class DisciplineClient
     {
-        private LectorAF lector;
-        private DisciplineAF discipline;
+        private readonly LectorAF lector;
+        private readonly DisciplineAF discipline;
 
         public DisciplineClient(DisciplineFactory factory)
         {
@@ -172,17 +212,12 @@ namespace OOP_Lab4
             discipline = factory.CreateDiscipline();
         }
 
-        public void CreateDisciplineClient()
-        {
-            discipline.CreateDiscipline();
-        }
+        public void CreateDisciplineClient() => discipline.CreateDiscipline();
 
-        public void CreateLectorClient()
-        {
-            lector.CreateLector();
-        }
+        public void CreateLectorClient() => lector.CreateLector();
 
-
+        // в класса DisciplineClient есть как поля лектора, так и поля дисциплины, так что мы
+        // можем обратиться ко всем этим полям внутри этого класса и переопределить ToString()
         public override string ToString()
         {
             string course = "";
@@ -191,9 +226,10 @@ namespace OOP_Lab4
                 course += c + "; ";
             foreach (string s in discipline.Speciality)
                 speciality += s + "; ";
-            string res = $"{discipline.Type}Название: {discipline.Name}\nКурс: {course}\nСеместр: {discipline.Semester}\n" +
-                $"Специальность: {speciality}\nЧасов лекций: {discipline.NumberOfLections}\n" +
-                $"Часов лабораторных: {discipline.NumberOfLabs}\nТип контроля: {discipline.Control}\n" +
+            string res = $"\t\t             ABSTRACT FACTORY\n{discipline.Type}Название: {discipline.Name}\nКурс: " +
+                $"{course}\nСеместр: {discipline.Semester}\nСпециальность: {speciality}\n" +
+                $"Часов лекций: {discipline.NumberOfLections}\nЧасов лабораторных: " +
+                $"{discipline.NumberOfLabs}\nТип контроля: {discipline.Control}\n" +
                 $"ФИО лектора: {lector.Name}\nКафедра: {lector.Department}\n" +
                 $"Аудитория: {lector.Auditorium}\n\n==============================================\n\n";
             return res;

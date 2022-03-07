@@ -46,7 +46,7 @@ namespace OOP_Lab4
             foreach (string s in Speciality)
                 speciality += s + "; ";
 
-            string res = $"{Type}Название: {Name}\nКурс: {course}\nСеместр: {Semester}\n" +
+            string res = $"\t\t\t       BUILDER\n{Type}Название: {Name}\nКурс: {course}\nСеместр: {Semester}\n" +
                 $"Специальность: {speciality}\nЧасов лекций: {NumberOfLections}\n" +
                 $"Часов лабораторных: {NumberOfLabs}\nТип контроля: {Control}\n" +
                 $"ФИО лектора: {lector.Name}\nКафедра: {lector.Department}\n" +

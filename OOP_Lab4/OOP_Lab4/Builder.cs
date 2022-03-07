@@ -36,7 +36,7 @@ namespace OOP_Lab4
             Director director = new Director();         // экземпляр директора
 
             Random random = new Random();               // рандом число от 1 до 4
-            int value = random.Next(1, 4);
+            int value = random.Next(1, 5);
 
             switch (value)
             {
