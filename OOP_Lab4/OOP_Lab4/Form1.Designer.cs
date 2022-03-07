@@ -50,6 +50,7 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button4
@@ -57,11 +58,11 @@
             this.button4.BackColor = System.Drawing.Color.Cornsilk;
             this.button4.Font = new System.Drawing.Font("Rockwell", 11.216F);
             this.button4.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button4.Location = new System.Drawing.Point(334, 460);
+            this.button4.Location = new System.Drawing.Point(618, 460);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(117, 56);
             this.button4.TabIndex = 45;
-            this.button4.Text = "Вывести на экран";
+            this.button4.Text = "On screen";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
@@ -280,11 +281,11 @@
             this.button5.BackColor = System.Drawing.Color.Cornsilk;
             this.button5.Font = new System.Drawing.Font("Rockwell", 11.216F);
             this.button5.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button5.Location = new System.Drawing.Point(583, 460);
+            this.button5.Location = new System.Drawing.Point(242, 460);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(117, 56);
             this.button5.TabIndex = 46;
-            this.button5.Text = "Создать с Builder";
+            this.button5.Text = "Builder";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -293,20 +294,34 @@
             this.button6.BackColor = System.Drawing.Color.Cornsilk;
             this.button6.Font = new System.Drawing.Font("Rockwell", 11.216F);
             this.button6.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button6.Location = new System.Drawing.Point(97, 450);
+            this.button6.Location = new System.Drawing.Point(51, 460);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(116, 77);
+            this.button6.Size = new System.Drawing.Size(116, 56);
             this.button6.TabIndex = 47;
-            this.button6.Text = "Создать с Abstract Factory";
+            this.button6.Text = "Abstract Factory";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Cornsilk;
+            this.button1.Font = new System.Drawing.Font("Rockwell", 11.216F);
+            this.button1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.button1.Location = new System.Drawing.Point(428, 460);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(126, 56);
+            this.button1.TabIndex = 48;
+            this.button1.Text = "Singleton";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::OOP_Lab4.Properties.Resources.a631f27081a367c;
-            this.ClientSize = new System.Drawing.Size(800, 549);
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.ClientSize = new System.Drawing.Size(927, 681);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -330,7 +345,8 @@
             this.Controls.Add(this.richTextBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "DisciplineRedact";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,6 +375,7 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button1;
     }
 }
 

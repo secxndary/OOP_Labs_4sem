@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 
@@ -16,7 +17,7 @@ namespace OOP_Lab4
 
 
 
-        // вывести основной list на экран
+        // вывести основной list на экран. сюда сразу добавляются все дисциплины из билдера и фабрики
         private void button4_Click_1(object sender, EventArgs e)
         {
             string result = "==============================================\n\n";
@@ -60,7 +61,26 @@ namespace OOP_Lab4
             string result = "==============================================\n\n";
             foreach (DisciplineClient dist in AbstractFactory.listAF)  
                 result += dist.ToString();
+
             MessageBox.Show(result);
         }
+
+
+        // singleton: запустить настройки внешнего вида окна
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Settings settings = new Settings();
+
+            if (settings != null)
+            {
+                Text = "DisciplineRedact";
+                StartPosition = FormStartPosition.CenterScreen;
+                Width = 616;
+                Height = 485;
+                BackgroundImage = Image.FromFile(@"C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab4\OOP_Lab4\Resources\a631f27081a367c.jpg");
+                MessageBox.Show("Настройки из Singleton применены!", "DisciplineRedact", MessageBoxButtons.OK);
+            }
+        }
+
     }
 }
