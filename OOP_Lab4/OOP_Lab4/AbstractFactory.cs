@@ -203,8 +203,8 @@ namespace OOP_Lab4
     // зависеть от того, какую фабрику мы передадим в параметры конструктора.
     public class DisciplineClient
     {
-        private readonly LectorAF lector;
-        private readonly DisciplineAF discipline;
+        public readonly LectorAF lector;
+        public readonly DisciplineAF discipline;
 
         public DisciplineClient(DisciplineFactory factory)
         {

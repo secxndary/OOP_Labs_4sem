@@ -13,7 +13,7 @@ namespace OOP_Lab4
             System.Diagnostics.Process.Start("https://www.belstu.by/fakultety");
 
         public List<Discipline> listOfDisciplines = new List<Discipline>();
-
+        public string prototype = "";   // сюда запишем объект, который мы клонировали в Prototype
 
 
 
@@ -26,6 +26,7 @@ namespace OOP_Lab4
                 result += dist.ToString();
             foreach (DisciplineClient dist in AbstractFactory.listAF)
                 result += dist.ToString();
+            result += prototype;
             MessageBox.Show(result);
         }
 
@@ -66,6 +67,7 @@ namespace OOP_Lab4
         }
 
 
+
         // singleton: запустить настройки внешнего вида окна
         private void button1_Click(object sender, EventArgs e)
         {
@@ -78,9 +80,18 @@ namespace OOP_Lab4
                 Width = 616;
                 Height = 485;
                 BackgroundImage = Image.FromFile(@"C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab4\OOP_Lab4\Resources\a631f27081a367c.jpg");
-                MessageBox.Show("Настройки из Singleton применены!", "DisciplineRedact", MessageBoxButtons.OK);
             }
         }
 
+
+
+        // прототип: клонировать случайный объект
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Client client = new Client();
+            string result = client.CloneRandom();
+            prototype = result;     // записываем этот объект в поле класса, чтобы добавить в общий вывод на экран
+            MessageBox.Show("==============================================\n\n" + result);
+        }
     }
 }
