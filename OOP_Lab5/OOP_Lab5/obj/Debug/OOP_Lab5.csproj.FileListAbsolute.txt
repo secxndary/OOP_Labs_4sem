@@ -1,0 +1,11 @@
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab5\OOP_Lab5\obj\Debug\OOP_Lab5.csproj.AssemblyReference.cache
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab5\OOP_Lab5\obj\Debug\OOP_Lab5.csproj.SuggestedBindingRedirects.cache
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab5\OOP_Lab5\obj\Debug\OOP_Lab4.Form1.resources
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab5\OOP_Lab5\obj\Debug\OOP_Lab5.Properties.Resources.resources
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab5\OOP_Lab5\obj\Debug\OOP_Lab5.csproj.GenerateResource.cache
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab5\OOP_Lab5\obj\Debug\OOP_Lab5.csproj.CoreCompileInputs.cache
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab5\OOP_Lab5\bin\Debug\OOP_Lab5.exe.config
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab5\OOP_Lab5\bin\Debug\OOP_Lab5.exe
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab5\OOP_Lab5\bin\Debug\OOP_Lab5.pdb
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab5\OOP_Lab5\obj\Debug\OOP_Lab5.exe
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab5\OOP_Lab5\obj\Debug\OOP_Lab5.pdb
