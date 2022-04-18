@@ -14,3 +14,17 @@ C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab6-7\OOP_Lab6-7\obj\Debug
 C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab6-7\OOP_Lab6-7\obj\Debug\OOP_Lab6-7.csproj.CoreCompileInputs.cache
 C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab6-7\OOP_Lab6-7\obj\Debug\OOP_Lab6-7.exe
 C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab6-7\OOP_Lab6-7\obj\Debug\OOP_Lab6-7.pdb
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab6-7\OOP_Lab6-7\obj\Debug\AddingFilm.g.cs
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab6-7\OOP_Lab6-7\obj\Debug\AddingFilm.baml
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab6-7\OOP_Lab6-7\obj\Debug\Dictionaries\RussianDictionary.baml
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab6-7\OOP_Lab6-7\obj\Debug\RussianDictionary.baml
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab6-7\OOP_Lab6-7\obj\Debug\Dictionaries\EnglishDictionary.baml
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab6-7\OOP_Lab6-7\obj\Debug\ViewAllFilms.g.cs
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab6-7\OOP_Lab6-7\obj\Debug\App.baml
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab6-7\OOP_Lab6-7\obj\Debug\ViewAllFilms.baml
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab6-7\OOP_Lab6-7\obj\Debug\EnglishDictionary.baml
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab6-7\OOP_Lab6-7\obj\Debug\RedactingFilm.baml
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab6-7\OOP_Lab6-7\obj\Debug\RedactingFilm.g.cs
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab6-7\OOP_Lab6-7\obj\Debug\Styles\BlackTheme.baml
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab6-7\OOP_Lab6-7\obj\Debug\BlackTheme.baml
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab6-7\OOP_Lab6-7\obj\Debug\Styles\WhiteTheme.baml

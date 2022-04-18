@@ -1,0 +1,35 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:v="clr-namespace:System;assembly=mscorlib">
+
+    <v:String x:Key="addFilmTip">Добавить фильм</v:String>
+    <v:String x:Key="viewFilmsTip">Просмотреть все фильмы</v:String>
+    <v:String x:Key="changeThemeTip">Поменять тему</v:String>
+
+
+
+
+    <v:String x:Key="addingFilm">Добавить фильм</v:String>
+    <v:String x:Key="filmName">Название</v:String>
+    <v:String x:Key="director">Режиссёр</v:String>
+    <v:String x:Key="genre">Жанр</v:String>
+
+    <v:String x:Key="genAction">Боевик</v:String>
+    <v:String x:Key="genThriller">Триллер</v:String>
+    <v:String x:Key="genFantasy">Фэнтези</v:String>
+    <v:String x:Key="genComedy">Комедия</v:String>
+    <v:String x:Key="genDrama">Драма</v:String>
+    <v:String x:Key="genMelodrama">Мелодрама</v:String>
+    <v:String x:Key="genFantastic">Фантастика</v:String>
+    <v:String x:Key="genHorror">Хоррор</v:String>
+    <v:String x:Key="genKids">Детский</v:String>
+    <v:String x:Key="genWar">Военный</v:String>
+
+    <v:String x:Key="duration">Длительность</v:String>
+    <v:String x:Key="minutes">минут</v:String>
+    <v:String x:Key="rating">Возрастной рейтинг</v:String>
+
+    <v:String x:Key="addPhotoButton">Загрузить фото</v:String>
+    <v:String x:Key="addFilmButton">Добавить</v:String>
+    <v:String x:Key="deleteButton">Очистить форму</v:String>
+
+</ResourceDictionary>

@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:OOP_Lab6_7"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Dictionaries/RussianDictionary.xaml" />
+                <ResourceDictionary Source="Styles/BlackTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

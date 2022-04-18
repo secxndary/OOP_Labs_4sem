@@ -1,25 +1,96 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using OOP_Lab6_7.ViewModels;
+using System.Windows.Input;
 
 namespace OOP_Lab6_7
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
+        private bool styleCheck = false;
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new MainWindowViewModel();
+            var sri = Application.GetResourceStream(new Uri("./Styles/arrow.cur", UriKind.Relative));
+            var customCursor = new Cursor(sri.Stream);
+            Cursor = customCursor;
+            App.LanguageChanged += languageChanged;
+            CultureInfo currLang = App.Language;
         }
+
+
+
+        private void languageChanged(Object sender, EventArgs e)
+        {
+            CultureInfo currLang = App.Language;
+        }
+
+        private void buttonRu_Click(object sender, RoutedEventArgs e)
+        {
+            CultureInfo lang = new CultureInfo("ru-RU");
+            App.Language = lang;
+        }
+
+        private void buttonEng_Click(object sender, RoutedEventArgs e)
+        {
+            CultureInfo lang = new CultureInfo("en-US");
+            App.Language = lang;
+        }
+
+
+
+
+
+
+        private void darkTheme_Click(object sender, RoutedEventArgs e)
+        {
+            if (styleCheck)
+            {
+                var uri = new Uri("./Styles/BlackTheme.xaml", UriKind.Relative);
+                var resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
+                Application.Current.Resources.Clear();
+                Application.Current.Resources.MergedDictionaries.Add(resourceDict);
+                styleCheck = false;
+            }
+            else
+            {
+                var uri = new Uri("./Styles/WhiteTheme.xaml", UriKind.Relative);
+                var resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
+                Application.Current.Resources.Clear();
+                Application.Current.Resources.MergedDictionaries.Add(resourceDict);
+                styleCheck = true;
+            }
+        }
+
+
+
+
+
+
+        private void addFilm_Click(object sender, RoutedEventArgs e)
+        {
+            AddingFilm addingFilm = new AddingFilm();
+            addingFilm.Show();
+        }
+
+
+
+        private void viewFilms_Click(object sender, RoutedEventArgs e)
+        {
+            ViewAllFilms viewAllFilms = new ViewAllFilms();
+            viewAllFilms.Show();
+            this.Close();
+        }
+
+
+
+
+
+        private void escButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close(); // закрытие окна
+        }
+
+
     }
 }

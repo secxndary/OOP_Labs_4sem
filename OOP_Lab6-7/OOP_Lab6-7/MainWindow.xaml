@@ -5,9 +5,136 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OOP_Lab6_7"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <StackPanel Orientation="Vertical">
-        <TextBox Text="{Binding Path=SynchronizedText, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}"/>
-        <TextBlock Text="{Binding Path=SynchronizedText, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"/>
-    </StackPanel>
+        Title="ПРЕМИУМ КИНО" Height="528" Width="960"
+        MinHeight="400" MinWidth="732"
+        WindowStartupLocation="CenterScreen"
+        Icon="C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab6-7\OOP_Lab6-7\Resources\logo_black.png">
+
+
+    <!--Словарь ресурсов-->
+    <!--<Window.Resources>
+        <ResourceDictionary Source="/RussianDictionary.xaml"/>
+    </Window.Resources>-->
+
+
+
+    <!--Основной грид-->
+    <Grid Name="mainGrid" Style="{DynamicResource blackBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="123*"></RowDefinition>
+            <RowDefinition Height="73*"></RowDefinition>
+            <RowDefinition Height="105"></RowDefinition>
+            <!--<RowDefinition Height="10"></RowDefinition>-->
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="60"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+
+        <!--Невидимая кнопка выхода-->
+        <Button Width="0" Height="0" IsCancel="True" Click="escButton_Click" />
+
+
+
+        <!--Фоновое изображение-->
+        <Image 
+            Grid.Row="1" Grid.Column="1" 
+            Source="/logo_png_crop.png"
+            Margin="70 0 70 30" VerticalAlignment="Bottom"
+            Grid.ColumnSpan="2">
+        </Image>
+
+
+        <!--Кнопка добавить фильм-->
+        <Button Name="addButton" Grid.Row="2" Grid.Column="1" Width="240"
+                Height="60" HorizontalAlignment="Right" Margin="0 0 50 0"
+                Content="{DynamicResource addingFilm}" FontSize="17"
+                Click="addFilm_Click" ToolTip="{DynamicResource addFilmTip}"
+                Foreground="Azure">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="30"/>
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <ImageBrush ImageSource ="/fill.png"></ImageBrush>
+            </Button.Background>
+        </Button>
+
+
+        <!--Кнопка просмотреть все фильмы-->
+        <Button Name="viewButton" Grid.Row="2" Grid.Column="2" Width="240"
+                Height="60" HorizontalAlignment="Left" Margin="50 0 0 0"
+                Content="{DynamicResource showAll}" FontSize="17"
+                Click="viewFilms_Click" ToolTip="{DynamicResource viewFilmsTip}"
+                Foreground="Azure">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="30"/>
+                    <Setter Property="BorderThickness" Value="0" />
+                </Style>
+            </Button.Resources>
+            <Button.Background>
+                <ImageBrush ImageSource ="/fill.png"></ImageBrush>
+            </Button.Background>
+        </Button>
+
+
+
+
+        <!--Английский язык-->
+        <Button Name="usaButton"
+                    Grid.Row="3"
+                    Grid.Column="4"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Margin="0 0 5 5"
+                    Width="50"
+                    Height="50"
+                    Background="{x:Null}" 
+                    BorderBrush="{x:Null}"
+                    ToolTip="English language"
+                    Click="buttonEng_Click">
+            <Image Source="/united-states.png" Margin="3"></Image>
+        </Button>
+
+
+        <!--Русский язык-->
+        <Button Name="russainButton"
+                    Grid.Row="3"
+                    Grid.Column="4"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Margin="0 0 5 5"
+                    Width="50"
+                    Height="50"
+                    Background="{x:Null}" 
+                    BorderBrush="{x:Null}"
+                    ToolTip="Русский язык"
+                    Click="buttonRu_Click">
+            <Image Source="/russia.png" Margin="3"></Image>
+        </Button>
+
+
+
+        <!--Темная тема-->
+        <Button Name="darkTheme"
+                    Grid.Row="0"
+                    Grid.Column="4"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Width="50"
+                    Height="50"
+                    Background="{x:Null}" 
+                    BorderBrush="{x:Null}"
+                    Click="darkTheme_Click"
+                    ToolTip="{DynamicResource changeThemeTip}">
+            <Image Source="/dark-theme.png" Margin="5"></Image>
+        </Button>
+
+    </Grid>
 </Window>
