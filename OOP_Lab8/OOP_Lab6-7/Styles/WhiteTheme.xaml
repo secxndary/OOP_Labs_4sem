@@ -1,0 +1,131 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="blackBackground">
+        <Setter Property="Control.Background" Value="White"/>
+    </Style>
+    <Style x:Key="yellowBackground">
+        <Setter Property="Control.Background" Value="#FFE98C1A"/>
+    </Style>
+
+    <Style x:Key="BlackAndWhite">
+        <Setter Property="Control.Background">
+            <Setter.Value>
+                <LinearGradientBrush>
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStop Color="#ababab" Offset="0" />
+                        <GradientStop Color="#d6d6d6" Offset="0.5" />
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+
+
+    <Style x:Key="mainButton" TargetType="Button">
+        <Setter Property="Background">
+            <Setter.Value>
+                <ImageBrush ImageSource ="/fill.png" Stretch="Fill"></ImageBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Control.FontSize" Value="17"/>
+        <Setter Property="Width" Value="240"/>
+        <Setter Property="Height" Value="60"/>
+
+        <!--Мультитриггер для главной кнопки-->
+        <Style.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsMouseOver" Value="True" />
+                    <Condition Property="IsPressed" Value="True" />
+                </MultiTrigger.Conditions>
+                <MultiTrigger.Setters>
+                    <Setter Property="Width" Value="250" />
+                    <Setter Property="Height" Value="70" />
+                    <Setter Property="FontSize" Value="19" />
+                </MultiTrigger.Setters>
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
+
+
+
+
+    <!--Дататриггеры для добавления фильма-->
+    <Style x:Key="focusTitle" TargetType="TextBlock">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding ElementName=filmName, Path=IsFocused}" Value="True">
+                <Setter Property="FontSize" Value="13"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="focusDir" TargetType="TextBlock">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding ElementName=filmDirector, Path=IsFocused}" Value="True">
+                <Setter Property="FontSize" Value="13"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="focusDura" TargetType="TextBlock">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding ElementName=duration, Path=IsFocused}" Value="True">
+                <Setter Property="FontSize" Value="13"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="focusRate" TargetType="TextBlock">
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding ElementName=rating, Path=IsFocused}" Value="True">
+                <Setter Property="FontSize" Value="13"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+
+    
+    
+    <!--Шаблоны для кнопок в ViewAllFilms-->
+    <!--TODO: onMouseOver цвет-->
+    <ControlTemplate x:Key="templateSearch" TargetType="Button">
+        <Border Height="30" Width="140" CornerRadius="10" Background="AliceBlue">
+            <ContentControl HorizontalAlignment="Center" VerticalAlignment="Center" Content="{DynamicResource search}" Foreground="Black"></ContentControl>
+        </Border>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="templateAdd" TargetType="Button">
+        <Border Height="30" Width="140" CornerRadius="10" Background="AliceBlue">
+            <ContentControl HorizontalAlignment="Center" VerticalAlignment="Center" Content="{DynamicResource addAnother}" Foreground="Black"></ContentControl>
+        </Border>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="templateRedact" TargetType="Button">
+        <Border Height="30" Width="140" CornerRadius="10" Background="AliceBlue">
+            <ContentControl HorizontalAlignment="Center" VerticalAlignment="Center" Content="{DynamicResource redact}" Foreground="Black"></ContentControl>
+        </Border>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="templateDel" TargetType="Button">
+        <Border Height="30" Width="140" CornerRadius="10" Background="AliceBlue">
+            <ContentControl HorizontalAlignment="Center" VerticalAlignment="Center" Content="{DynamicResource delete}" Foreground="Black"></ContentControl>
+        </Border>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="templateAll" TargetType="Button">
+        <Border Height="30" Width="140" CornerRadius="10" Background="AliceBlue">
+            <ContentControl HorizontalAlignment="Center" VerticalAlignment="Center" Content="{DynamicResource showAll}" Foreground="Black"></ContentControl>
+        </Border>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="templateFilter" TargetType="Button">
+        <Border Height="30" Width="140" CornerRadius="10" Background="AliceBlue">
+            <ContentControl HorizontalAlignment="Center" VerticalAlignment="Center" Content="{DynamicResource filter}" Foreground="Black"></ContentControl>
+        </Border>
+    </ControlTemplate>
+
+
+</ResourceDictionary>

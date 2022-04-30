@@ -18,14 +18,6 @@
       <Photo>D:\Загрузки\B9a1kNihcuQ.jpg</Photo>
     </Movie>
     <Movie>
-      <Title>апрапрапр</Title>
-      <Description>апрапр</Description>
-      <Genre>Боевик</Genre>
-      <Duration>9999</Duration>
-      <Rating>999</Rating>
-      <Photo>file:///D:/Загрузки/dark-theme.png</Photo>
-    </Movie>
-    <Movie>
       <Title>qwe</Title>
       <Description>zxc</Description>
       <Genre>Мелодрама</Genre>
@@ -152,6 +144,22 @@
       <Duration>123</Duration>
       <Rating>1212</Rating>
       <Photo>D:\Загрузки\009_shlakoblokun.jpg</Photo>
+    </Movie>
+    <Movie>
+      <Title>цуй</Title>
+      <Description>йуцу</Description>
+      <Genre>Драма</Genre>
+      <Duration>122</Duration>
+      <Rating>2</Rating>
+      <Photo>D:\Загрузки\2f3a0wxLoYXgErP6fAxHXyHw3WBmKWqrv5HNSR8eZ58G21Ut3xsQFgvhETuI92v0HEWsKY2zxtlgzHhf_ADrJ8-W.jpg</Photo>
+    </Movie>
+    <Movie>
+      <Title>йцвй</Title>
+      <Description>цу</Description>
+      <Genre>Драма</Genre>
+      <Duration>2</Duration>
+      <Rating>3</Rating>
+      <Photo>D:\Загрузки\55591_1000.jpg</Photo>
     </Movie>
   </FilmsList>
 </Cinema>
