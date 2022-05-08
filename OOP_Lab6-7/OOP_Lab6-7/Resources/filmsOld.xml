@@ -2,6 +2,126 @@
 <Cinema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <FilmsList>
     <Movie>
+      <Title>dfgdfg</Title>
+      <Description>dfgdfg</Description>
+      <Genre>Мелодрама</Genre>
+      <Duration>32</Duration>
+      <Rating>4</Rating>
+      <Photo>file:///C:/Users/valda/source/repos/semester %234/OOP_Labs/OOP_Lab9/OOP_Lab6-7/Resources/knocking.jpg</Photo>
+    </Movie>
+    <Movie>
+      <Title>Бойцовский клуб</Title>
+      <Description>Дэвид Финчер</Description>
+      <Genre>Боевик, драма</Genre>
+      <Duration>139</Duration>
+      <Rating>9.5</Rating>
+      <Photo>C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab9\OOP_Lab6-7\Resources\fight-club.jpg</Photo>
+    </Movie>
+    <Movie>
+      <Title>Криминальное чтиво</Title>
+      <Description>Квентин Тарантино</Description>
+      <Genre>Боевик, криминальный</Genre>
+      <Duration>154</Duration>
+      <Rating>9.71</Rating>
+      <Photo>C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab9\OOP_Lab6-7\Resources\pulp-fiction.jpg</Photo>
+    </Movie>
+    <Movie>
+      <Title>Однажды в Голливуде</Title>
+      <Description>Квентин Тарантино</Description>
+      <Genre>Драма, комедия</Genre>
+      <Duration>171</Duration>
+      <Rating>8.78</Rating>
+      <Photo>C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab9\OOP_Lab6-7\Resources\once-time-hollywood.jpg</Photo>
+    </Movie>
+    <Movie>
+      <Title>Достучаться до небес</Title>
+      <Description>Томас Ян</Description>
+      <Genre>Комедия, боевик</Genre>
+      <Duration>90</Duration>
+      <Rating>9.74</Rating>
+      <Photo>C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab9\OOP_Lab6-7\Resources\knocking.jpg</Photo>
+    </Movie>
+    <Movie>
+      <Title>Дюна</Title>
+      <Description>Дени Вильнёв</Description>
+      <Genre>Боевик</Genre>
+      <Duration>155</Duration>
+      <Rating>8.91</Rating>
+      <Photo>C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab9\OOP_Lab6-7\Resources\dune.jpg</Photo>
+    </Movie>
+    <Movie>
+      <Title>Бешеные псы</Title>
+      <Description>Квентин Тарантино</Description>
+      <Genre>Боевик, криминальный</Genre>
+      <Duration>99</Duration>
+      <Rating>8.78</Rating>
+      <Photo>C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab9\OOP_Lab6-7\Resources\reservoir-dogs.jpg</Photo>
+    </Movie>
+    <Movie>
+      <Title>ахуеть</Title>
+      <Description>опять бд</Description>
+      <Genre>Комедия</Genre>
+      <Duration>123</Duration>
+      <Rating>3.6</Rating>
+      <Photo>C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab9\OOP_Lab6-7\Resources\fight-club.jpg</Photo>
+    </Movie>
+    <Movie>
+      <Title>Бойцовский клуб</Title>
+      <Description>Дэвид Финчер</Description>
+      <Genre>Боевик, драма</Genre>
+      <Duration>139</Duration>
+      <Rating>9.5</Rating>
+      <Photo>C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab9\OOP_Lab6-7\Resources\fight-club.jpg</Photo>
+    </Movie>
+    <Movie>
+      <Title>Криминальное чтиво</Title>
+      <Description>Квентин Тарантино</Description>
+      <Genre>Боевик, криминальный</Genre>
+      <Duration>154</Duration>
+      <Rating>9.71</Rating>
+      <Photo>C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab9\OOP_Lab6-7\Resources\pulp-fiction.jpg</Photo>
+    </Movie>
+    <Movie>
+      <Title>Однажды в Голливуде</Title>
+      <Description>Квентин Тарантино</Description>
+      <Genre>Драма, комедия</Genre>
+      <Duration>171</Duration>
+      <Rating>8.78</Rating>
+      <Photo>C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab9\OOP_Lab6-7\Resources\once-time-hollywood.jpg</Photo>
+    </Movie>
+    <Movie>
+      <Title>Достучаться до небес</Title>
+      <Description>Томас Ян</Description>
+      <Genre>Комедия, боевик</Genre>
+      <Duration>90</Duration>
+      <Rating>9.74</Rating>
+      <Photo>C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab9\OOP_Lab6-7\Resources\knocking.jpg</Photo>
+    </Movie>
+    <Movie>
+      <Title>Дюна</Title>
+      <Description>Дени Вильнёв</Description>
+      <Genre>Боевик</Genre>
+      <Duration>155</Duration>
+      <Rating>8.91</Rating>
+      <Photo>C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab9\OOP_Lab6-7\Resources\dune.jpg</Photo>
+    </Movie>
+    <Movie>
+      <Title>Бешеные псы</Title>
+      <Description>Квентин Тарантино</Description>
+      <Genre>Боевик, криминальный</Genre>
+      <Duration>99</Duration>
+      <Rating>8.78</Rating>
+      <Photo>C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab9\OOP_Lab6-7\Resources\reservoir-dogs.jpg</Photo>
+    </Movie>
+    <Movie>
+      <Title>ахуеть</Title>
+      <Description>опять бд</Description>
+      <Genre>Комедия</Genre>
+      <Duration>123</Duration>
+      <Rating>3.6</Rating>
+      <Photo>C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab9\OOP_Lab6-7\Resources\fight-club.jpg</Photo>
+    </Movie>
+    <Movie>
       <Title>Зелёная миля</Title>
       <Description>Фрэнк Дарабонт</Description>
       <Genre>Драма</Genre>
@@ -48,6 +168,86 @@
       <Duration>155</Duration>
       <Rating>8.91</Rating>
       <Photo>C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab9\OOP_Lab6-7\Resources\dune.jpg</Photo>
+    </Movie>
+    <Movie>
+      <Title>Бешеные псы</Title>
+      <Description>Квентин Тарантино</Description>
+      <Genre>Боевик, криминальный</Genre>
+      <Duration>99</Duration>
+      <Rating>8.78</Rating>
+      <Photo>C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab9\OOP_Lab6-7\Resources\reservoir-dogs.jpg</Photo>
+    </Movie>
+    <Movie>
+      <Title>ахуеть</Title>
+      <Description>опять бд</Description>
+      <Genre>Комедия</Genre>
+      <Duration>123</Duration>
+      <Rating>3.6</Rating>
+      <Photo>C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab9\OOP_Lab6-7\Resources\fight-club.jpg</Photo>
+    </Movie>
+    <Movie>
+      <Title>Бойцовский клуб</Title>
+      <Description>Дэвид Финчер</Description>
+      <Genre>Боевик, драма</Genre>
+      <Duration>139</Duration>
+      <Rating>9.5</Rating>
+      <Photo>C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab9\OOP_Lab6-7\Resources\fight-club.jpg</Photo>
+    </Movie>
+    <Movie>
+      <Title>Криминальное чтиво</Title>
+      <Description>Квентин Тарантино</Description>
+      <Genre>Боевик, криминальный</Genre>
+      <Duration>154</Duration>
+      <Rating>9.71</Rating>
+      <Photo>C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab9\OOP_Lab6-7\Resources\pulp-fiction.jpg</Photo>
+    </Movie>
+    <Movie>
+      <Title>Однажды в Голливуде</Title>
+      <Description>Квентин Тарантино</Description>
+      <Genre>Драма, комедия</Genre>
+      <Duration>171</Duration>
+      <Rating>8.78</Rating>
+      <Photo>C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab9\OOP_Lab6-7\Resources\once-time-hollywood.jpg</Photo>
+    </Movie>
+    <Movie>
+      <Title>Достучаться до небес</Title>
+      <Description>Томас Ян</Description>
+      <Genre>Комедия, боевик</Genre>
+      <Duration>90</Duration>
+      <Rating>9.74</Rating>
+      <Photo>C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab9\OOP_Lab6-7\Resources\knocking.jpg</Photo>
+    </Movie>
+    <Movie>
+      <Title>Дюна</Title>
+      <Description>Дени Вильнёв</Description>
+      <Genre>Боевик</Genre>
+      <Duration>155</Duration>
+      <Rating>8.91</Rating>
+      <Photo>C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab9\OOP_Lab6-7\Resources\dune.jpg</Photo>
+    </Movie>
+    <Movie>
+      <Title>Бешеные псы</Title>
+      <Description>Квентин Тарантино</Description>
+      <Genre>Боевик, криминальный</Genre>
+      <Duration>99</Duration>
+      <Rating>8.78</Rating>
+      <Photo>C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab9\OOP_Lab6-7\Resources\reservoir-dogs.jpg</Photo>
+    </Movie>
+    <Movie>
+      <Title>ахуеть</Title>
+      <Description>опять бд</Description>
+      <Genre>Комедия</Genre>
+      <Duration>123</Duration>
+      <Rating>3,4</Rating>
+      <Photo>C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab9\OOP_Lab6-7\Resources\fight-club.jpg</Photo>
+    </Movie>
+    <Movie>
+      <Title>ghfgh</Title>
+      <Description>fghfgh</Description>
+      <Genre>Фантастика</Genre>
+      <Duration>234</Duration>
+      <Rating>234</Rating>
+      <Photo>C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab9\OOP_Lab6-7\Resources\green-mile.jpg</Photo>
     </Movie>
   </FilmsList>
 </Cinema>
