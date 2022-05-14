@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows;
@@ -14,14 +15,11 @@ namespace OOP_Lab6_7
     /// </summary>
     public partial class ViewAllFilms : Window
     {
-        private Cinema _listOfFilms;
         DBContext context;
 
         public ViewAllFilms()
         {
             InitializeComponent();
-            _listOfFilms = DataTransfer.DeserializeFilms();
-            //tableView.ItemsSource = _listOfFilms.filmsList;
             var sri = Application.GetResourceStream(new Uri("./Styles/arrow.cur", UriKind.Relative));
             var customCursor = new Cursor(sri.Stream);
             Cursor = customCursor;
@@ -47,8 +45,6 @@ namespace OOP_Lab6_7
             AddingFilm film = new AddingFilm();
             film.Show();
             tableView.ItemsSource = context.Movie.Local.ToList();
-
-            //tableView.ItemsSource = _listOfFilms.filmsList;
         }
 
 
@@ -77,17 +73,6 @@ namespace OOP_Lab6_7
                     context.SaveChanges();
 
                     tableView.ItemsSource = context.Movie.Local.ToList();
-
-
-                    //foreach (var film in _listOfFilms.filmsList)
-                    //    if (film == (EFCore.Entities.Movie)tableView.SelectedItem)
-                    //    {
-                    //        _listOfFilms.filmsList[_listOfFilms.filmsList.IndexOf(film)] = filmEdit;
-                    //        break;
-                    //    }
-
-                    //DataTransfer.SerializeFilms(_listOfFilms);
-                    //tableView.ItemsSource = _listOfFilms.filmsList;
                 }
         }
 
@@ -99,10 +84,6 @@ namespace OOP_Lab6_7
             context.SaveChanges();
             MessageBox.Show("Фильм удалён.", "Успешно!", MessageBoxButton.OK);
             tableView.ItemsSource = context.Movie.Local.ToList();
-
-
-            //_listOfFilms.filmsList.Remove((Classes.Movie)tableView.SelectedItem);
-            //DataTransfer.SerializeFilms(_listOfFilms);
         }
 
 
@@ -110,61 +91,46 @@ namespace OOP_Lab6_7
         private void showButton_Click(object sender, RoutedEventArgs e)
         {
             tableView.ItemsSource = context.Movie.Local.ToList();
-
-            //_listOfFilms = DataTransfer.DeserializeFilms();
-            //tableView.ItemsSource = _listOfFilms.filmsList;
         }
 
 
         // Кнопка "Отфильтровать"
         private void filterButton_Click(object sender, RoutedEventArgs e)
         {
-            _listOfFilms = DataTransfer.DeserializeFilms();
-            var cinema = new Cinema();
-
-            foreach (var item in _listOfFilms.filmsList)
+            var listFull = context.Movie.Local.ToList();
+            var listFilter = new List<EFCore.Entities.Movie>();
+            foreach (var item in listFull)
                 if (item.Genre == comboBoxFilterSelect.Text)
-                    cinema.filmsList.Add(item);
-
-            tableView.ItemsSource = cinema.filmsList;
+                    listFilter.Add(item);
+            tableView.ItemsSource = listFilter;
         }
 
 
         // Кнопка "Поиск"
         private void searchButton_Click(object sender, RoutedEventArgs e)
         {
-            _listOfFilms = DataTransfer.DeserializeFilms();
-            var cinema = new Cinema();
-            foreach (var item in _listOfFilms.filmsList)
+            var listFull = context.Movie.Local.ToList();
+            var listSearch = new List<EFCore.Entities.Movie>();
+            string pattern = @"^" + searchBox.myTextBox.Text + @"\w*";
+            foreach (var item in listFull)
             {
-                string pattern = @"^" + searchBox.myTextBox.Text + @"\w*";
                 if (item.Title == searchBox.myTextBox.Text)
-                {
-                    cinema.filmsList.Add(item);
-                }
+                    listSearch.Add(item);
                 else if (Regex.IsMatch(item.Title, pattern))
-                {
-                    cinema.filmsList.Add(item);
-                }
+                    listSearch.Add(item);
             }
-            tableView.ItemsSource = cinema.filmsList;
+
+            tableView.ItemsSource = listSearch;
         }
 
 
-
-        // Кнопка "Назад"   (работает при добавлении нового фильма)
-        private void undoButton_Click(object sender, RoutedEventArgs e)
+        // Кнопка "Добавить расписание"
+        private void addScheduleButton_Click(object sender, RoutedEventArgs e)
         {
-            var listOld = DataTransfer.DeserializeOld();
-            tableView.ItemsSource = listOld.filmsList;
-        }
+            AddSchedule addSchedule = new AddSchedule();
+            addSchedule.Show();
+            var selectedFilm = (EFCore.Entities.Movie)tableView.SelectedItem;
 
-
-
-        // Кнопка "Вперед"
-        private void redoButton_Click(object sender, RoutedEventArgs e)
-        {
-            tableView.ItemsSource = _listOfFilms.filmsList;
         }
     }
 }

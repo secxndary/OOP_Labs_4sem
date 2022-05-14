@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "edb73d13-ea61-4f18-9798-84e017407e64": {
+      "ProjectGuid": "edb73d13-ea61-4f18-9798-84e017407e64",
+      "DisplayName": "Courses_EF_Core",
+      "ColorIndex": 0
+    },
+    "d7d849a2-c7f2-4979-87fe-e83d836385a0": {
+      "ProjectGuid": "d7d849a2-c7f2-4979-87fe-e83d836385a0",
+      "DisplayName": "OOP_Lab10",
+      "ColorIndex": 1
+    },
+    "5b04ba29-8068-49a4-bb73-b950199048a5": {
+      "ProjectGuid": "5b04ba29-8068-49a4-bb73-b950199048a5",
+      "DisplayName": "DB",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

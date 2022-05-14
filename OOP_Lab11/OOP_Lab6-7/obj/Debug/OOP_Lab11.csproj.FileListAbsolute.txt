@@ -141,3 +141,10 @@ C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab11\OOP_Lab6-7\bin\Debug\
 C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab11\OOP_Lab6-7\bin\Debug\System.Text.Encodings.Web.xml
 C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab11\OOP_Lab6-7\bin\Debug\System.Text.Json.xml
 C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab11\OOP_Lab6-7\bin\Debug\System.ValueTuple.xml
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab11\OOP_Lab6-7\bin\Debug\MaterialDesignColors.dll
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab11\OOP_Lab6-7\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab11\OOP_Lab6-7\bin\Debug\MaterialDesignColors.pdb
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab11\OOP_Lab6-7\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab11\OOP_Lab6-7\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab11\OOP_Lab6-7\obj\Debug\AddSchedule.g.cs
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab11\OOP_Lab6-7\obj\Debug\AddSchedule.baml

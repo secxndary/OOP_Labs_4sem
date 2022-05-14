@@ -52,4 +52,13 @@
     <local:DependencyClass Title="{DynamicResource duration}" x:Key="durationDC" Number="3"></local:DependencyClass>
     <local:DependencyClass Title="{DynamicResource rating}" x:Key="ratingDC" Number="4"></local:DependencyClass>
 
+
+    <v:String x:Key="adminPanel">Панель администратора</v:String>
+    <v:String x:Key="afisha">Афиша</v:String>
+    <v:String x:Key="aboutUs">О нас</v:String>
+    <v:String x:Key="cabinet">Личный кабинет</v:String>
+    <v:String x:Key="buyTicket">Купить билет</v:String>
+    <v:String x:Key="addSchedule">Добавить расписание</v:String>
+
+
 </ResourceDictionary>

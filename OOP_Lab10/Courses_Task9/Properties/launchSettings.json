@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Courses_Task9": {
+      "commandName": "Project",
+      "sqlDebugging": true
+    }
+  }
+}

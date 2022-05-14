@@ -28,8 +28,8 @@
               Style="{DynamicResource yellowBackground}">
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.8*"></RowDefinition>
                 <RowDefinition Height="1.2*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
                 <RowDefinition Height="1*"></RowDefinition>
                 <RowDefinition Height="1*"></RowDefinition>
                 <RowDefinition Height="1*"></RowDefinition>
@@ -39,7 +39,7 @@
 
 
 
-            <Button Name="undoButton" Width="40" Height="40" HorizontalAlignment="Left"
+            <!--<Button Name="undoButton" Width="40" Height="40" HorizontalAlignment="Left"
                    Margin="60 0 0 0" Grid.Row="0" Background="Transparent" BorderThickness="0"
                     Click="undoButton_Click">
                 <Image Source="/undo.png" Margin="3" />
@@ -49,31 +49,36 @@
                    Margin="0 0 60 0" Grid.Row="0" Background="Transparent" BorderThickness="0"
                     Click="redoButton_Click">
                 <Image Source="/redo.png" Margin="3" />
-            </Button>
+            </Button>-->
 
 
    
             
             <!--Поиск-->
             <local:UserControl1 Width="140" Height="25" x:Name="searchBox"
-                                Grid.Row="1" VerticalAlignment="Top" Margin="0 5 0 0">
+                                Grid.Row="0" VerticalAlignment="Top" Margin="0 5 0 0">
             </local:UserControl1>
             <Button Name="searchButton" Width="140" Height="30"
                     VerticalAlignment="Bottom" 
-                    Click="searchButton_Click" Grid.Row="1" Margin="0 0 0 5"
-                    Template="{DynamicResource templateSearch}">
+                    Click="searchButton_Click" Grid.Row="0" Margin="0 0 0 5"
+                    Template="{DynamicResource templateSearch}" Cursor="Hand">
             </Button>
 
 
-            <Button Name="addButton" Grid.Row="2" Width="140"
+            <Button Name="addButton" Grid.Row="1" Width="140"
                     Height="30" Click="addButton_Click" 
                     Template="{DynamicResource templateAdd}">
             </Button>
 
 
-            <Button Name="redactButton" Grid.Row="3" Width="140"
+            <Button Name="redactButton" Grid.Row="2" Width="140"
                     Height="30" Click="redactButton_Click" 
                     Template="{DynamicResource templateRedact}">
+            </Button>
+
+            <Button Name="addScheduleButton" Grid.Row="3" Width="140"
+                    Height="30" Click="addScheduleButton_Click" 
+                    Template="{DynamicResource templateAddSchedule}">
             </Button>
 
             <Button Name="deleteButton" Grid.Row="4" Width="140"
@@ -134,11 +139,26 @@
                Name="logoViewAll" Style="{DynamicResource logoShowOnLoad}">
         </Image>
 
-
+    
         <ListView Name="tableView" Grid.Row="1" Grid.Column="1"
                   Style="{DynamicResource blackBackground}">
+
+            <!--<ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem" BasedOn="{StaticResource MaterialDesignGridViewItem}" />
+            </ListView.ItemContainerStyle>-->
+
             <ListView.View>
                 <GridView>
+
+
+                    <!--<GridViewColumn Header="{DynamicResource filmName}"  DisplayMemberBinding="{Binding Title}" />
+                    <GridViewColumn Header="{DynamicResource director}" DisplayMemberBinding="{Binding Director}" />
+                    <GridViewColumn Header="{DynamicResource genre}" DisplayMemberBinding="{Binding Genre}" />
+                    <GridViewColumn Header="{DynamicResource duration}"  DisplayMemberBinding="{Binding Duration}" />
+                    <GridViewColumn Header="{DynamicResource rating}" DisplayMemberBinding="{Binding Rating}" />-->
+
+
+
                     <GridViewColumn  Width="130" Header="{DynamicResource filmName}">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>

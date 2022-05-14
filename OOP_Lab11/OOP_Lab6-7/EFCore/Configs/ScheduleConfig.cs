@@ -14,6 +14,9 @@ namespace OOP_Lab6_7.EFCore.Configs
             entity.HasKey(x => x.Id);
             entity.Property(x => x.Id_Movie).IsRequired();
             entity.Property(x => x.DateTime).IsRequired();
+
+            entity.HasOne(o => o.Movie).WithMany(u => u.Schedule).HasForeignKey(o => o.Id_Movie);
+
         }
     }
 }

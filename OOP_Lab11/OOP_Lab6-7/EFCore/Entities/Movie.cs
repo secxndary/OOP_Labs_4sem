@@ -29,5 +29,10 @@ namespace OOP_Lab6_7.EFCore.Entities
             Rating = rating;
             Photo = photo;
         }
+
+        public override string ToString()
+        {
+            return $"{Title} — {Director} ({Genre}) {Duration} мин; {Rating}";
+        }
     }
 }

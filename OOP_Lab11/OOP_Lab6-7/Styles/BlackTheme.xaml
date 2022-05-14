@@ -7,14 +7,17 @@
     <Style x:Key="yellowBackground">
         <Setter Property="Control.Background" Value="#FFE98C1A"/>
     </Style>
-
+    <Style x:Key="text">
+        <Setter Property="Control.Foreground" Value="White"/>
+    </Style>
+    
     
     <Style x:Key="BlackAndWhite">
         <Setter Property="Control.Background">
             <Setter.Value>
                 <LinearGradientBrush>
                     <LinearGradientBrush.GradientStops>
-                        <GradientStop Color="#1f1f1f" Offset="0" />
+                        <GradientStop Color="#2f2f2f" Offset="0" />
                         <GradientStop Color="Black" Offset="1" />
                     </LinearGradientBrush.GradientStops>
                 </LinearGradientBrush>
@@ -169,6 +172,11 @@
         </Border>
     </ControlTemplate>
 
+    <ControlTemplate x:Key="templateAddSchedule" TargetType="Button">
+        <Border Height="30" Width="140" CornerRadius="10" Background="AliceBlue">
+            <ContentControl HorizontalAlignment="Center" VerticalAlignment="Center" Content="{DynamicResource addSchedule}" Foreground="Black"></ContentControl>
+        </Border>
+    </ControlTemplate>
 
 
 
@@ -196,7 +204,6 @@
             </Style>
         </Style.Resources>
         <Setter Property="Height" Value="30"/>
-
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderBrush">
             <Setter.Value>
@@ -207,7 +214,7 @@
             </Setter.Value>
         </Setter>
         <!--todo color foreground и локализацию-->
-        <Setter Property="Foreground" Value="Black"/>       
+        <Setter Property="Foreground" Value="White"/>       
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
@@ -231,4 +238,14 @@
         </Style.Triggers>
     </Style>
 
+
+
+    <Style x:Key="headerText" TargetType="Button">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+    </Style>
+    
+    
 </ResourceDictionary>

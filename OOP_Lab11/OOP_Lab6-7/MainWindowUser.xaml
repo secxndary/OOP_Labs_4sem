@@ -6,11 +6,12 @@
         xmlns:local="clr-namespace:OOP_Lab6_7"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="MainWindowUser" Height="528" Width="960">
-    <ScrollViewer>
-        <Grid>
+        Title="ПРЕМИУМ КИНО" Height="528" Width="960">
+    <!--<ScrollViewer>-->
+        <Grid Style="{DynamicResource BlackAndWhite}">
             <Grid.RowDefinitions>
-
+                <RowDefinition Height="100" />
+                <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
@@ -19,15 +20,52 @@
             </Grid.ColumnDefinitions>
 
 
+            
             <Button Width="0" Height="0" IsCancel="True" 
                 Click="escButton_Click" />
 
-            
+
+            <!--Header-->
+            <Grid Grid.ColumnSpan="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2.2*"/>
+                    <ColumnDefinition Width="1.7*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1.2*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Image Source="/logo_png_crop.png" MaxWidth="300"
+                       HorizontalAlignment="Left" Margin="15 15 0 40"
+                       Grid.Column="0"/>
+                <Button Content="{DynamicResource adminPanel}" 
+                        Style="{DynamicResource headerText}"
+                        Margin="15 15 10 40" Padding="12"
+                        Grid.Column="1"/>
+                <Button Content="{DynamicResource afisha}" 
+                        Style="{DynamicResource headerText}"
+                        Margin="30 15 30 40" Padding="12"
+                        Grid.Column="2" />
+                <Button Content="{DynamicResource aboutUs}" 
+                        Style="{DynamicResource headerText}"
+                        Margin="25 15 25 40" Padding="12"
+                        Grid.Column="3"/>
+                <Button Content="{DynamicResource cabinet}" 
+                        Style="{DynamicResource headerText}"
+                        Margin="10 15 10 40" Padding="12"
+                        Grid.Column="4"/>
+            </Grid>
+
+
+
+
             <ListView Name="mainFilmsListView" Grid.Column="1"
                       HorizontalContentAlignment="Stretch" 
                       VerticalContentAlignment="Center"
                       ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                      BorderThickness="0">
+                      ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                      BorderThickness="0" Grid.Row="1"
+                      Background="Transparent">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <UniformGrid Columns="4" />
@@ -50,15 +88,18 @@
                                        Grid.Row="1"
                                        HorizontalAlignment="Center" 
                                        FontWeight="DemiBold"
-                                       FontSize="16"/>
+                                       FontSize="16"
+                                       Style="{DynamicResource text}"/>
                             <TextBlock Text="{Binding Genre}"
                                        Grid.Row="2"
                                        HorizontalAlignment="Center"
-                                       FontSize="12" Margin="0 5 0 17"/>
-                            <Button Name="buyTicket" Content="Купить билет" 
+                                       FontSize="12" Margin="0 5 0 17"
+                                       Style="{DynamicResource text}"/>
+                            <Button Name="buyTicket" Content="{DynamicResource buyTicket}" 
                                     Margin="30 0" MinHeight="25" Height="30"
                                     Grid.Row="3" MaxWidth="130" MaxHeight="70"
-                                    Style="{DynamicResource buttonUI}"/>
+                                    Style="{DynamicResource buttonUI}"
+                                    Click="buyTicket_Click"/>
                         </Grid>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
@@ -67,5 +108,5 @@
 
 
         </Grid>
-    </ScrollViewer>
+    <!--</ScrollViewer>-->
 </Window>

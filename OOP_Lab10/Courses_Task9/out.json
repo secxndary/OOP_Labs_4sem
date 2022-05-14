@@ -1,0 +1,75 @@
+[
+  {
+    "Id": "A08374E3-EAE7-4464-8877-0FA3BCD2368A",
+    "Email": "valdaitsevv@mail.ru",
+    "Name": "Александр",
+    "Surname": "Валдайцев",
+    "RolesList": [
+      "Проектный менеджер"
+    ]
+  },
+  {
+    "Id": "0762CF48-B5DC-422A-AB81-29C1D179918B",
+    "Email": "yudeshk00_01@mail.ru",
+    "Name": "Роман",
+    "Surname": "Юдешко",
+    "RolesList": [
+      "Инженер-программист"
+    ]
+  },
+  {
+    "Id": "05FC0747-C25C-4038-803E-34A072892473",
+    "Email": "alimake_eugene@mail.ru",
+    "Name": "Евгения",
+    "Surname": "Николаева",
+    "RolesList": [
+      "Проектный менеджер"
+    ]
+  },
+  {
+    "Id": "4E2249AA-EA09-4BBC-9263-44B3E927BE39",
+    "Email": "alohadanceqq@mail.ru",
+    "Name": "Илья",
+    "Surname": "Коробкин",
+    "RolesList": [
+      "Инженер-программист"
+    ]
+  },
+  {
+    "Id": "B2772010-106F-44CA-8AC7-4A0CF1DB8957",
+    "Email": "t0x1ch@mail.ru",
+    "Name": "Антон",
+    "Surname": "Димитриади",
+    "RolesList": [
+      "Программист-тестировщик"
+    ]
+  },
+  {
+    "Id": "A93D134B-48C4-48CA-A6F3-4BD9706E3E61",
+    "Email": "pereigrall122@mail.ru",
+    "Name": "Антон",
+    "Surname": "Ткачёв",
+    "RolesList": [
+      "Инженер-программист",
+      "Программист-тестировщик"
+    ]
+  },
+  {
+    "Id": "0E8B0DB7-2656-412B-B1A1-EDFE710C7771",
+    "Email": "zxcvashkevich663@mail.ru",
+    "Name": "Александр",
+    "Surname": "Ивашкевич",
+    "RolesList": [
+      "Программист-тестировщик"
+    ]
+  },
+  {
+    "Id": "ECBE0111-1FCD-4124-800D-FAD9098757E7",
+    "Email": "nevrublevskayyaa996@mail.ru",
+    "Name": "Екатерина",
+    "Surname": "Врублевская",
+    "RolesList": [
+      "Инженер-программист"
+    ]
+  }
+]
