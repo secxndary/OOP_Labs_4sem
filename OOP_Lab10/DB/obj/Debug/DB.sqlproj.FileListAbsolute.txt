@@ -4,3 +4,9 @@ C:\Users\valda\source\repos\semester #4\.NET_Courses\Courses_Task9\DB\bin\Debug\
 C:\Users\valda\source\repos\semester #4\.NET_Courses\Courses_Task9\DB\obj\Debug\DB.sqlproj.AssemblyReference.cache
 C:\Users\valda\source\repos\semester #4\.NET_Courses\Courses_Task9\DB\obj\Debug\DB.dll
 C:\Users\valda\source\repos\semester #4\.NET_Courses\Courses_Task9\DB\obj\Debug\DB.pdb
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab10\DB\bin\Debug\DB.dacpac
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab10\DB\bin\Debug\DB.dll
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab10\DB\bin\Debug\DB.pdb
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab10\DB\obj\Debug\DB.sqlproj.AssemblyReference.cache
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab10\DB\obj\Debug\DB.dll
+C:\Users\valda\source\repos\semester #4\OOP_Labs\OOP_Lab10\DB\obj\Debug\DB.pdb

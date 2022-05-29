@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\valda\\source\\repos\\semester #4\\OOP_Labs\\OOP_Lab10_test\\Courses_Task9\\OOP_Lab10.csproj": {}
+    "C:\\Users\\valda\\source\\repos\\semester #4\\OOP_Labs\\OOP_Lab10\\Courses_Task9\\OOP_Lab10.csproj": {}
   },
   "projects": {
-    "C:\\Users\\valda\\source\\repos\\semester #4\\OOP_Labs\\OOP_Lab10_test\\Courses_Task9\\OOP_Lab10.csproj": {
+    "C:\\Users\\valda\\source\\repos\\semester #4\\OOP_Labs\\OOP_Lab10\\Courses_Task9\\OOP_Lab10.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\valda\\source\\repos\\semester #4\\OOP_Labs\\OOP_Lab10_test\\Courses_Task9\\OOP_Lab10.csproj",
+        "projectUniqueName": "C:\\Users\\valda\\source\\repos\\semester #4\\OOP_Labs\\OOP_Lab10\\Courses_Task9\\OOP_Lab10.csproj",
         "projectName": "OOP_Lab10",
-        "projectPath": "C:\\Users\\valda\\source\\repos\\semester #4\\OOP_Labs\\OOP_Lab10_test\\Courses_Task9\\OOP_Lab10.csproj",
+        "projectPath": "C:\\Users\\valda\\source\\repos\\semester #4\\OOP_Labs\\OOP_Lab10\\Courses_Task9\\OOP_Lab10.csproj",
         "packagesPath": "C:\\Users\\valda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\valda\\source\\repos\\semester #4\\OOP_Labs\\OOP_Lab10_test\\Courses_Task9\\obj\\",
+        "outputPath": "C:\\Users\\valda\\source\\repos\\semester #4\\OOP_Labs\\OOP_Lab10\\Courses_Task9\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\valda\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -60,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

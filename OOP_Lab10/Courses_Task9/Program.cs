@@ -11,12 +11,12 @@ public class Program
     public static void Main()
     {
         var user = new User(Guid.NewGuid().ToString(), "senchenya12@mail.ru", "Владислав", "Сенченя");
-        Sort();
+        //Sort();
         //Read();
         //Add(user);
         //Update();
         //Delete(user);
-        //SelectActiveUsers();
+        SelectActiveUsers();
     }
 
 
